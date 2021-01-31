@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeController" customModule="GreekKino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uPf-P2-dBC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" red="0.4941176471" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="yVd-5Y-gLg">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yVd-5Y-gLg" id="H18-og-idS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="FgX-WL-Zsj" kind="presentation" identifier="HomeToTalon" id="SKe-xd-5Gv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uPf-P2-dBC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JV4-Cc-qjM"/>
+                            <constraint firstItem="uPf-P2-dBC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="axF-Cf-6lh"/>
+                            <constraint firstItem="uPf-P2-dBC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m9s-pr-bGP"/>
+                            <constraint firstItem="uPf-P2-dBC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uhT-d2-cHE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="uPf-P2-dBC" id="H9A-jD-N0Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1041" y="-129"/>
+        </scene>
+        <!--Talon View Controller-->
+        <scene sceneID="bSf-UM-40X">
+            <objects>
+                <viewController id="FgX-WL-Zsj" customClass="TalonViewController" customModule="GreekKino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Efw-fX-O5w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tmo-MT-cf5" userLabel="Vertical stack">
+                                <rect key="frame" x="12" y="355" width="390" height="287"/>
+                                <subviews>
+                                    <stackView clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ehd-gW-w6L">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kH-IF-KDm" userLabel="1">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="zpB-o0-U4d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgT-BS-TRB">
+                                                <rect key="frame" x="40" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="VsB-rb-KeM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g2-IO-jlH">
+                                                <rect key="frame" x="80" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="AJG-xR-I0f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kd-RM-AGy">
+                                                <rect key="frame" x="120" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Ca2-gJ-egu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsf-5x-Adn">
+                                                <rect key="frame" x="160" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="7jO-vx-wPT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-Nn-tV2">
+                                                <rect key="frame" x="200" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="iSI-7w-Yxs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfV-Qw-JLx">
+                                                <rect key="frame" x="240" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="1k9-AN-Zzn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xB-Xu-zd8">
+                                                <rect key="frame" x="280" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Vz5-ZX-H3u"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oW-xN-l8b">
+                                                <rect key="frame" x="320" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="BAB-Xu-IRC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUO-0n-gOw">
+                                                <rect key="frame" x="360" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="10"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="8fa-CE-Vkc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dif-ef-4bR">
+                                        <rect key="frame" x="0.0" y="36" width="390" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAd-zt-hL2">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="11"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="abC-Q4-OeI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQr-B9-9zU">
+                                                <rect key="frame" x="40" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="12"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="TPd-dE-gR1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLt-cY-Jyc">
+                                                <rect key="frame" x="80" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="13"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="0wE-Dl-B6o"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNp-3s-M8g">
+                                                <rect key="frame" x="120" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="14"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="9Kv-b1-TvA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os8-3C-iX1">
+                                                <rect key="frame" x="160" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="15"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="5aC-5t-pDO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0R-xO-bG1">
+                                                <rect key="frame" x="200" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="16"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Q2u-XF-ime"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jh9-NT-GSk">
+                                                <rect key="frame" x="240" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="17"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="oR2-Sd-J7G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNQ-J8-1dU">
+                                                <rect key="frame" x="280" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="18"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="L2K-IV-4kw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkm-ly-q0M">
+                                                <rect key="frame" x="320" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="19"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="3LE-2Q-1in"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-xl-PoY">
+                                                <rect key="frame" x="360" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="20"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="nDN-kN-kRa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yv5-lx-cu4">
+                                        <rect key="frame" x="0.0" y="72" width="390" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SG-pf-Tuo">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="21"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="6ai-VX-TZS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTr-W1-AEW">
+                                                <rect key="frame" x="40" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="22"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="bRO-z5-glo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuu-xP-QGO">
+                                                <rect key="frame" x="80" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="23"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="ad3-Lv-Faz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gf-3a-znw">
+                                                <rect key="frame" x="120" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="24"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="t3E-da-n7X"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymh-7C-MYr">
+                                                <rect key="frame" x="160" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="25"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="5Zv-1y-bNk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-1A-U6C">
+                                                <rect key="frame" x="200" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="26"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="ba3-uW-R8m"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zji-0W-PAK">
+                                                <rect key="frame" x="240" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="27"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="ibI-93-X9H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGX-pq-7mn">
+                                                <rect key="frame" x="280" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="28"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Xbh-cY-MuI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7br-zs-Xag">
+                                                <rect key="frame" x="320" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="29"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="JSj-BB-x3h"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28h-GD-1Bl">
+                                                <rect key="frame" x="360" y="0.0" width="30" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="30"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Mv3-9P-UyR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="cvd-v6-y2R">
+                                        <rect key="frame" x="0.0" y="108" width="390" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asl-8Z-PPT">
+                                                <rect key="frame" x="0.0" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="31"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="zLi-iu-lLT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkY-6N-oIY">
+                                                <rect key="frame" x="40" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="32"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="2LU-q8-WDf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGB-DS-SU3">
+                                                <rect key="frame" x="80" y="0.0" width="30.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="33"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="miz-oH-KAb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0y-No-VmI">
+                                                <rect key="frame" x="119.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="34"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Gn1-H7-cgb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr1-S3-tla">
+                                                <rect key="frame" x="159.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="35"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="dz8-nP-OFU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peF-hA-Cfh">
+                                                <rect key="frame" x="199.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="36"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="z3D-rM-mZW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4B-e8-MyT">
+                                                <rect key="frame" x="239.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="37"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Pl5-eV-PIR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGj-3U-Lry">
+                                                <rect key="frame" x="279.5" y="0.0" width="30.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="38"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="fxm-Fg-HMB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzG-eQ-rlJ">
+                                                <rect key="frame" x="319" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="39"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="CIs-Y4-Pi2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zd-03-3Qu">
+                                                <rect key="frame" x="359" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="40"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="V62-pY-HsH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="PVU-IN-Ri3">
+                                        <rect key="frame" x="0.0" y="144" width="390" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mk1-8Y-r4n">
+                                                <rect key="frame" x="0.0" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="41"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="YW6-Q6-HRJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQA-zD-Pes">
+                                                <rect key="frame" x="40" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="42"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="MpV-wV-kRX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvO-gk-Go3">
+                                                <rect key="frame" x="80" y="0.0" width="30.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="43"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="nBa-l4-EOx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fc-2m-og6">
+                                                <rect key="frame" x="119.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="44"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="OJr-RV-68E"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="45" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vv-P1-UED">
+                                                <rect key="frame" x="159.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="45"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="8fL-66-5wZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="46" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93D-l4-Mjr">
+                                                <rect key="frame" x="199.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="46"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="0qV-6c-d7a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="47" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZp-Ac-boT">
+                                                <rect key="frame" x="239.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="47"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="9Or-w3-Ieb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="48" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0J-m6-2aD">
+                                                <rect key="frame" x="279.5" y="0.0" width="30.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="48"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="GIQ-Vo-F53"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="49" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FS-cJ-iu8">
+                                                <rect key="frame" x="319" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="49"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="xVU-nh-3H5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Aw-s7-f61">
+                                                <rect key="frame" x="359" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="50"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="fA4-JW-VNb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZmQ-yS-fea">
+                                        <rect key="frame" x="0.0" y="180" width="390" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="641-vJ-LlK">
+                                                <rect key="frame" x="0.0" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="51"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="elP-Xu-QPN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB9-rI-yKv">
+                                                <rect key="frame" x="40" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="52"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="N84-Hm-1E4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="53" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Za0-W0-wjn">
+                                                <rect key="frame" x="80" y="0.0" width="30.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="53"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Jlq-4j-3Uw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="54" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yD-JY-utz">
+                                                <rect key="frame" x="119.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="54"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="GQU-Ne-BEK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="55" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTm-S4-V2n">
+                                                <rect key="frame" x="159.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="55"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Ni2-Gb-h2v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="56" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1td-Xq-aW1">
+                                                <rect key="frame" x="199.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="56"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="dwV-rj-jDw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="57" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4i-6G-Cw8">
+                                                <rect key="frame" x="239.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="57"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="D4t-6L-0lQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="58" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVs-wx-TLh">
+                                                <rect key="frame" x="279.5" y="0.0" width="30.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="58"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="zVD-rv-0iu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="59" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTG-ks-Mcw">
+                                                <rect key="frame" x="319" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="59"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="LD1-K0-2Qd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHF-my-HMv">
+                                                <rect key="frame" x="359" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="60"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="DCs-hD-IDc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-Am-dSB">
+                                        <rect key="frame" x="0.0" y="216" width="390" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="61" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBm-Lj-Mc6">
+                                                <rect key="frame" x="0.0" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="61"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="HGx-dH-yct"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="62" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZy-Si-Zvl">
+                                                <rect key="frame" x="40" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="62"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="DCH-Ci-0Da"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="63" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZy-zb-rWY">
+                                                <rect key="frame" x="80" y="0.0" width="30.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="63"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="vx1-wz-L8A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="64" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlB-Cf-8n0">
+                                                <rect key="frame" x="119.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="64"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="8Cg-iQ-FKf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="65" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhM-Dh-ygB">
+                                                <rect key="frame" x="159.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="65"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="k0G-jc-b9r"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="66" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ah-vs-kM0">
+                                                <rect key="frame" x="199.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="66"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="cbi-Yb-V82"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="67" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qw4-HS-UxS">
+                                                <rect key="frame" x="239.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="67"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="pML-vg-jml"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="68" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-au-OVb">
+                                                <rect key="frame" x="279.5" y="0.0" width="30.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="68"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="JTp-e8-gjO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="69" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syQ-cp-zVA">
+                                                <rect key="frame" x="319" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="69"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="eJ8-e6-ueq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="70" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtI-XW-bsN">
+                                                <rect key="frame" x="359" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="70"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="ahb-iA-JoN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="22L-CU-bvE">
+                                        <rect key="frame" x="0.0" y="252" width="390" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="71" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-QY-RIW">
+                                                <rect key="frame" x="0.0" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="71"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="10Y-hC-E69"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="72" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFQ-Ln-aYp">
+                                                <rect key="frame" x="40" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="72"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="kgJ-bI-9K8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="73" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsm-Qi-9hE">
+                                                <rect key="frame" x="80" y="0.0" width="30.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="73"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Xa2-BD-KtT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="74" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shK-Ks-rTQ">
+                                                <rect key="frame" x="119.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="74"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="OfS-Il-5fY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ma-Zd-6iT">
+                                                <rect key="frame" x="159.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="75"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="zFc-Bu-x9k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="76" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNm-C6-bjW">
+                                                <rect key="frame" x="199.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="76"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="J6Q-f3-Fsn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="77" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIp-iu-QM7">
+                                                <rect key="frame" x="239.5" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="77"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="nMe-yd-p8d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="78" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aQ-8x-iDC">
+                                                <rect key="frame" x="279.5" y="0.0" width="30.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="78"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="7J4-Ja-DJ0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="79" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7py-7H-eFy">
+                                                <rect key="frame" x="319" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="79"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="Hp3-XH-LJe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="80" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTj-vX-rSK">
+                                                <rect key="frame" x="359" y="0.0" width="31" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="80"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="mNb-4B-dbm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyd-GR-DAe">
+                                <rect key="frame" x="20" y="296" width="120" height="47"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Nasumični odabir">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomNumberButtonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="6eu-jX-33p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuf-36-UDC">
+                                <rect key="frame" x="20" y="650" width="120" height="43.5"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="9eW-z5-k5n"/>
+                                    <constraint firstAttribute="height" constant="43.5" id="OL3-LX-o7U"/>
+                                </constraints>
+                                <state key="normal" title="Izbriši sve">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetAll:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="ntM-XB-zMg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1x-n4-dDR">
+                                <rect key="frame" x="117" y="709" width="168" height="44"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="0Or-Hi-TWG"/>
+                                    <constraint firstAttribute="height" constant="44" id="gKh-NM-ahh"/>
+                                </constraints>
+                                <state key="normal" title="REZULTATI">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aHL-Wx-Pdv" kind="presentation" identifier="TalonToResults" id="qMz-Jm-iUw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRK-1r-sAE">
+                                <rect key="frame" x="274" y="650" width="120" height="43.5"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Se5-Ie-Dfp"/>
+                                    <constraint firstAttribute="height" constant="43.5" id="hSx-be-H1Y"/>
+                                </constraints>
+                                <state key="normal" title="Izvlačenje">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="liveDrawButtonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="2A9-ih-WEd"/>
+                                    <action selector="randomNumberButtonPressed:" destination="FgX-WL-Zsj" eventType="touchUpInside" id="bRb-xi-RHz"/>
+                                    <segue destination="2ID-wN-sWY" kind="presentation" identifier="TalonToLive" id="LNu-Zh-7pK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izabrano:" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Co1-rG-MSh">
+                                <rect key="frame" x="233" y="307.5" width="71" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="lYX-Ud-iBA">
+                                <rect key="frame" x="312" y="305" width="11.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 20" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="kh0-hI-bj1">
+                                <rect key="frame" x="333" y="305" width="33" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-gn-nag" userLabel="infoLabel">
+                                <rect key="frame" x="0.0" y="173" width="414" height="35.5"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="fyv-QF-gUZ" userLabel="infoLabel">
+                                <rect key="frame" x="0.0" y="228.5" width="414" height="51"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vreme izvlačenja:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHM-4s-rOT">
+                                <rect key="frame" x="20" y="182" width="113" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMF-1F-xum" userLabel="drawTime">
+                                <rect key="frame" x="141" y="182" width="39.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="86834" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIs-GC-Irf" userLabel="drawId">
+                                <rect key="frame" x="346.5" y="182" width="47.5" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kolo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lI9-uq-3VV">
+                                <rect key="frame" x="308" y="181" width="32.5" height="17.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="qOC-MI-xKh" userLabel="timeLeftLabel">
+                                <rect key="frame" x="0.0" y="66" width="414" height="81"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="gQb-Sw-eIv"/>
+                                    <constraint firstAttribute="height" constant="81" id="msa-Ai-0EZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YgR-UJ-aSu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m1x-n4-dDR" firstAttribute="top" secondItem="Uuf-36-UDC" secondAttribute="bottom" constant="15.5" id="4Op-Dx-ckn"/>
+                            <constraint firstItem="MMF-1F-xum" firstAttribute="top" secondItem="YgR-UJ-aSu" secondAttribute="top" constant="182" id="4f7-xA-cIs"/>
+                            <constraint firstItem="Tmo-MT-cf5" firstAttribute="top" secondItem="lYX-Ud-iBA" secondAttribute="bottom" constant="27" id="5iX-6s-ihM"/>
+                            <constraint firstItem="nyd-GR-DAe" firstAttribute="top" secondItem="z9c-gn-nag" secondAttribute="bottom" constant="87.5" id="8rD-Ch-4na"/>
+                            <constraint firstItem="JRK-1r-sAE" firstAttribute="top" secondItem="Tmo-MT-cf5" secondAttribute="bottom" constant="8" symbolic="YES" id="BcX-m3-DNR"/>
+                            <constraint firstItem="fyv-QF-gUZ" firstAttribute="trailing" secondItem="YgR-UJ-aSu" secondAttribute="trailing" id="BcY-J6-SPU"/>
+                            <constraint firstItem="FIs-GC-Irf" firstAttribute="leading" secondItem="lI9-uq-3VV" secondAttribute="trailing" constant="6" id="Frl-ez-iKe"/>
+                            <constraint firstItem="YgR-UJ-aSu" firstAttribute="trailing" secondItem="JRK-1r-sAE" secondAttribute="trailing" constant="20" id="GUe-eM-Ruk"/>
+                            <constraint firstItem="qOC-MI-xKh" firstAttribute="top" secondItem="YgR-UJ-aSu" secondAttribute="top" constant="66" id="JDY-ra-M45"/>
+                            <constraint firstItem="z9c-gn-nag" firstAttribute="trailing" secondItem="YgR-UJ-aSu" secondAttribute="trailing" id="LIw-Ub-FIC"/>
+                            <constraint firstItem="z9c-gn-nag" firstAttribute="top" secondItem="YgR-UJ-aSu" secondAttribute="top" constant="173" id="Llp-em-HmK"/>
+                            <constraint firstItem="YgR-UJ-aSu" firstAttribute="trailing" secondItem="FIs-GC-Irf" secondAttribute="trailing" constant="20" id="Mxc-eU-yGm"/>
+                            <constraint firstItem="lYX-Ud-iBA" firstAttribute="leading" secondItem="Co1-rG-MSh" secondAttribute="trailing" constant="8" symbolic="YES" id="RAS-A5-AKa"/>
+                            <constraint firstItem="MMF-1F-xum" firstAttribute="leading" secondItem="CHM-4s-rOT" secondAttribute="trailing" constant="8" symbolic="YES" id="RJz-l1-oc0"/>
+                            <constraint firstItem="nyd-GR-DAe" firstAttribute="leading" secondItem="YgR-UJ-aSu" secondAttribute="leading" constant="20" id="S6T-o4-Ga5"/>
+                            <constraint firstItem="YgR-UJ-aSu" firstAttribute="trailing" secondItem="m1x-n4-dDR" secondAttribute="trailing" constant="129" id="SfC-y4-6Ro"/>
+                            <constraint firstItem="nyd-GR-DAe" firstAttribute="top" secondItem="CHM-4s-rOT" secondAttribute="bottom" constant="97" id="SfL-Qf-koa"/>
+                            <constraint firstItem="Tmo-MT-cf5" firstAttribute="top" secondItem="nyd-GR-DAe" secondAttribute="bottom" constant="12" id="T2W-Ci-AJ4"/>
+                            <constraint firstItem="fyv-QF-gUZ" firstAttribute="top" secondItem="FIs-GC-Irf" secondAttribute="bottom" constant="29.5" id="TBl-zE-yF0"/>
+                            <constraint firstItem="Uuf-36-UDC" firstAttribute="leading" secondItem="YgR-UJ-aSu" secondAttribute="leading" constant="20" id="TmI-r8-Pff"/>
+                            <constraint firstItem="Tmo-MT-cf5" firstAttribute="top" secondItem="Co1-rG-MSh" secondAttribute="bottom" constant="27" id="VQJ-Sd-XTW"/>
+                            <constraint firstItem="Co1-rG-MSh" firstAttribute="leading" secondItem="nyd-GR-DAe" secondAttribute="trailing" constant="93" id="VyG-jp-4P4"/>
+                            <constraint firstItem="Tmo-MT-cf5" firstAttribute="top" secondItem="kh0-hI-bj1" secondAttribute="bottom" constant="27" id="W0m-bp-Fll"/>
+                            <constraint firstItem="z9c-gn-nag" firstAttribute="leading" secondItem="YgR-UJ-aSu" secondAttribute="leading" id="XAw-hd-qh1"/>
+                            <constraint firstItem="fyv-QF-gUZ" firstAttribute="top" secondItem="z9c-gn-nag" secondAttribute="bottom" constant="20" id="Xg5-RE-WnY"/>
+                            <constraint firstItem="Tmo-MT-cf5" firstAttribute="leading" secondItem="YgR-UJ-aSu" secondAttribute="leading" constant="12" id="YC0-xj-69O"/>
+                            <constraint firstItem="YgR-UJ-aSu" firstAttribute="bottom" secondItem="m1x-n4-dDR" secondAttribute="bottom" constant="55" id="Yog-S7-GzX"/>
+                            <constraint firstItem="m1x-n4-dDR" firstAttribute="leading" secondItem="YgR-UJ-aSu" secondAttribute="leading" constant="117" id="ZBx-w8-k2e"/>
+                            <constraint firstItem="CHM-4s-rOT" firstAttribute="top" secondItem="YgR-UJ-aSu" secondAttribute="top" constant="182" id="c3M-Fs-mtN"/>
+                            <constraint firstItem="Uuf-36-UDC" firstAttribute="top" secondItem="Tmo-MT-cf5" secondAttribute="bottom" constant="8" symbolic="YES" id="cGE-oP-0EW"/>
+                            <constraint firstItem="YgR-UJ-aSu" firstAttribute="trailing" secondItem="Tmo-MT-cf5" secondAttribute="trailing" constant="12" id="eys-x0-AJ0"/>
+                            <constraint firstItem="fyv-QF-gUZ" firstAttribute="leading" secondItem="YgR-UJ-aSu" secondAttribute="leading" id="fAf-dP-DxF"/>
+                            <constraint firstItem="nyd-GR-DAe" firstAttribute="top" secondItem="fyv-QF-gUZ" secondAttribute="bottom" constant="16.5" id="kGp-w6-axW"/>
+                            <constraint firstItem="qOC-MI-xKh" firstAttribute="trailing" secondItem="YgR-UJ-aSu" secondAttribute="trailing" id="pHJ-0v-HIn"/>
+                            <constraint firstItem="fyv-QF-gUZ" firstAttribute="top" secondItem="lI9-uq-3VV" secondAttribute="bottom" constant="30" id="pnz-JS-NIP"/>
+                            <constraint firstItem="kh0-hI-bj1" firstAttribute="leading" secondItem="lYX-Ud-iBA" secondAttribute="trailing" constant="9.5" id="sq0-K2-R79"/>
+                            <constraint firstItem="lI9-uq-3VV" firstAttribute="top" secondItem="YgR-UJ-aSu" secondAttribute="top" constant="181" id="wId-U2-z3O"/>
+                            <constraint firstItem="Tmo-MT-cf5" firstAttribute="top" secondItem="MMF-1F-xum" secondAttribute="bottom" constant="152" id="wd2-Rx-QaY"/>
+                            <constraint firstItem="FIs-GC-Irf" firstAttribute="top" secondItem="YgR-UJ-aSu" secondAttribute="top" constant="182" id="wvF-5N-deu"/>
+                            <constraint firstItem="Tmo-MT-cf5" firstAttribute="top" secondItem="YgR-UJ-aSu" secondAttribute="top" constant="355" id="wzT-Zx-wBo"/>
+                            <constraint firstItem="CHM-4s-rOT" firstAttribute="leading" secondItem="YgR-UJ-aSu" secondAttribute="leading" constant="20" id="xKv-jo-7A1"/>
+                            <constraint firstItem="qOC-MI-xKh" firstAttribute="leading" secondItem="YgR-UJ-aSu" secondAttribute="leading" id="xjL-YD-bLH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentNumbersSelectedLabel" destination="fyv-QF-gUZ" id="CC3-nd-1wi"/>
+                        <outlet property="drawId" destination="FIs-GC-Irf" id="r61-O5-x11"/>
+                        <outlet property="drawTime" destination="MMF-1F-xum" id="YEt-Wa-NjV"/>
+                        <outlet property="numbersCounter" destination="lYX-Ud-iBA" id="8y6-l2-MF9"/>
+                        <outlet property="timeLeftLabel" destination="qOC-MI-xKh" id="dlL-Sf-vdb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tl6-04-MPi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="-129"/>
+        </scene>
+        <!--Live Draw Controller-->
+        <scene sceneID="kyn-hi-PB2">
+            <objects>
+                <viewController id="2ID-wN-sWY" customClass="LiveDrawController" customModule="GreekKino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0vR-0t-e9u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="fgU-UV-vdC">
+                                <rect key="frame" x="20" y="168" width="374" height="471"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uživo izvlačenje" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLJ-gJ-R6t">
+                                <rect key="frame" x="0.0" y="41" width="414" height="96"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eec-Eu-F15">
+                                <rect key="frame" x="0.0" y="20" width="72" height="22"/>
+                                <state key="normal" title="Nazad" image="chevron.backward.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="2ID-wN-sWY" eventType="touchUpInside" id="CAC-rZ-3YH"/>
+                                    <segue destination="FgX-WL-Zsj" kind="presentation" identifier="LiveToTalon" id="Mav-VS-DxB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P4e-35-enV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eec-Eu-F15" firstAttribute="leading" secondItem="P4e-35-enV" secondAttribute="leading" id="6WC-xs-RD9"/>
+                            <constraint firstItem="fgU-UV-vdC" firstAttribute="leading" secondItem="P4e-35-enV" secondAttribute="leading" constant="20" id="9do-x7-Z0m"/>
+                            <constraint firstItem="fgU-UV-vdC" firstAttribute="top" secondItem="P4e-35-enV" secondAttribute="top" constant="168" id="Fhd-R6-LIJ"/>
+                            <constraint firstItem="fgU-UV-vdC" firstAttribute="top" secondItem="eec-Eu-F15" secondAttribute="bottom" constant="126" id="TEC-wq-5qR"/>
+                            <constraint firstItem="zLJ-gJ-R6t" firstAttribute="top" secondItem="P4e-35-enV" secondAttribute="top" constant="41" id="VaR-gy-hGb"/>
+                            <constraint firstItem="P4e-35-enV" firstAttribute="bottom" secondItem="fgU-UV-vdC" secondAttribute="bottom" constant="169" id="fFe-EA-Lvj"/>
+                            <constraint firstItem="zLJ-gJ-R6t" firstAttribute="trailing" secondItem="P4e-35-enV" secondAttribute="trailing" id="gQo-NK-y82"/>
+                            <constraint firstItem="P4e-35-enV" firstAttribute="trailing" secondItem="fgU-UV-vdC" secondAttribute="trailing" constant="20" id="m8b-6D-prK"/>
+                            <constraint firstItem="fgU-UV-vdC" firstAttribute="top" secondItem="zLJ-gJ-R6t" secondAttribute="bottom" constant="31" id="pvc-ST-WeN"/>
+                            <constraint firstItem="zLJ-gJ-R6t" firstAttribute="leading" secondItem="P4e-35-enV" secondAttribute="leading" id="rWg-0V-euj"/>
+                            <constraint firstItem="eec-Eu-F15" firstAttribute="top" secondItem="P4e-35-enV" secondAttribute="top" constant="20" id="zau-2r-07e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="fgU-UV-vdC" id="bFp-t5-LaH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tId-wl-hkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931.88405797101461" y="-129.24107142857142"/>
+        </scene>
+        <!--Results Controller-->
+        <scene sceneID="4fZ-Y6-1VM">
+            <objects>
+                <viewController id="aHL-Wx-Pdv" customClass="ResultsController" customModule="GreekKino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qId-GO-Fzu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="gk4-qs-VzP">
+                                <rect key="frame" x="20" y="174" width="374" height="536"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="62H-kF-5SI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="winningNumbersLabel" destination="gk4-qs-VzP" id="8oJ-1H-LyX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ItI-GO-hf0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369.56521739130437" y="628.125"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SKe-xd-5Gv"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="chevron.backward.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
